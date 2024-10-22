@@ -20,8 +20,8 @@ export default function App() {
       <div>
         <MyTitle />
         <PokemonCard pokemon = { pokemonList[pokemonIndex] } />
-        {(pokemonIndex > 0) && <button type="button" onClick={prevIndex}>Précedent</button>}
-        {(pokemonIndex < pokemonList.length - 1) && <button type="button" onClick={nextIndex}>Suivant</button>}
+        {pokemonIndex > 0 && <button type="button" onClick={prevIndex}>Précedent</button>}
+        {pokemonIndex < pokemonList.length - 1 && <button type="button" onClick={nextIndex}>Suivant</button>}
       </div>        
     </>
   )
