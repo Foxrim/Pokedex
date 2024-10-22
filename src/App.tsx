@@ -1,17 +1,17 @@
 import './App.css'
-import MyTitle from './MyTitle'
+import PokemonCard from './components/PokemonCard'
+import MyTitle from './components/MyTitle'
 
-function PokemonCard() {
+function App() {
 
   return (
     <>
-      <section>
+      <div>
         <MyTitle />
-        <img src="./public/Salamèche.png" alt="Salamèche" />  
-        <h2>Salamèche</h2>
-      </section>        
+        <PokemonCard />
+      </div>        
     </>
   )
 }
 
-export default PokemonCard
+export default App
