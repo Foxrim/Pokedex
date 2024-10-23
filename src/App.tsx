@@ -42,7 +42,7 @@ const pokemonList = [
       <div>
         <MyTitle />
         <PokemonCard pokemon = { pokemonList[pokemonIndex] } />
-        <NavBar pokemonList={pokemonList} pokemonIndex={pokemonIndex} countPrev={countPrev} />
+        <NavBar pokemonList={pokemonList} pokemonIndex={pokemonIndex} setPokemonIndex={countPrev}/>
       </div>        
     </>
   )

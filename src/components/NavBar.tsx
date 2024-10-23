@@ -1,29 +1,24 @@
-interface Pokemon {
+interface pokemon {
   name: string;
   imgSrc?: string;
   alt?: string
 }
 
-interface NavBarProps {
+interface navBarProps {
   pokemonIndex: number;
-  countPrev: (index: number) => void;
-  pokemonList: Pokemon[];
+  pokemonList: pokemon[];
+  setPokemonIndex: (index: number) => void;
 }
 
-export default function NavBar ({pokemonList, pokemonIndex, countPrev}: NavBarProps) {
+export default function NavBar ({pokemonList, setPokemonIndex}: navBarProps) {
 
-const prevIndex = () => {
-countPrev(pokemonIndex - 1);
-};
-
-const nextIndex = () => {
-countPrev(pokemonIndex + 1);
-};
 
     return (
         <>
-        {pokemonIndex > 0 && <button type="button" onClick={prevIndex}>Précedent</button>}
-        {pokemonIndex < pokemonList.length - 1 && <button type="button" onClick={nextIndex}>Suivant</button>}
+            {pokemonList.map((article, index) => (
+              <button key={index} onClick={() => setPokemonIndex(index)}>{article.name}</button>
+            ))}
         </>
     )
-};
+  };
+  
