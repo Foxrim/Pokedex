@@ -6,7 +6,7 @@ interface PokemonProps {
     }
 }
 
-function PokemonCard({ pokemon } : PokemonProps) {
+export default function PokemonCard({ pokemon } : PokemonProps) {
 
     return (
       <>
@@ -16,7 +16,4 @@ function PokemonCard({ pokemon } : PokemonProps) {
         </figure>
       </>
     )
-  }
-      
-
-    export default PokemonCard
+};
