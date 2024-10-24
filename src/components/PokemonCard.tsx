@@ -18,7 +18,6 @@ function PokemonCard() {
         },
         {
           name: "mew",
-          imgSrc:"./public/Mew.png",
         }
     ];
     
