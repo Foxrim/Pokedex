@@ -12,11 +12,17 @@ interface navBarProps {
 
 export default function NavBar ({pokemonList, setPokemonIndex}: navBarProps) {
 
+  const handleButtonClick = (index: number, name: string) => {
+    setPokemonIndex(index);
+    if (name === 'Pikachu') {
+      alert('PIKA PIKA !!!!!');
+    }
+  };
 
     return (
         <>
-            {pokemonList.map((article, index) => (
-              <button key={index} onClick={() => setPokemonIndex(index)}>{article.name}</button>
+           {pokemonList.map((article, index) => (
+              <button key={index} onClick={() => handleButtonClick(index, article.name)}>{article.name}</button>
             ))}
         </>
     )

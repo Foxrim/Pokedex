@@ -1,13 +1,20 @@
 import './App.css'
 import MyTitle from './components/MyTitle'
 import NavBar from './components/NavBar';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PokemonCard from './components/PokemonCard';
 
 
 export default function App() {
 
 const [pokemonIndex, countPrev] = useState(0);
+
+useEffect(
+  () => {
+    alert("hello pokemon trainer :)");
+  }, 
+  []
+)
 
 const pokemonList = [
   {
@@ -42,7 +49,7 @@ const pokemonList = [
       <div>
         <MyTitle />
         <PokemonCard pokemon = { pokemonList[pokemonIndex] } />
-        <NavBar pokemonList={pokemonList} pokemonIndex={pokemonIndex} setPokemonIndex={countPrev}/>
+        <NavBar pokemonList={pokemonList} pokemonIndex={pokemonIndex} setPokemonIndex={countPrev} />
       </div>        
     </>
   )
